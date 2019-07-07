@@ -1,0 +1,6 @@
+-IE:/Projects/Demo2048/src
+-IE:/Projects/Demo2048/build
+-DWIN32
+-o
+E:/Projects/Demo2048/build/moc_ui_interface.cpp
+E:/Projects/Demo2048/src/ui_interface.h

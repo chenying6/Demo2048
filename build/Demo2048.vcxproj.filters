@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\Projects\Demo2048\src\Demo2048.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Projects\Demo2048\build\moc_Demo2048.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\Projects\Demo2048\src\Demo2048.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Projects\Demo2048\build\ui_ui.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Projects\Demo2048\build\CMakeFiles\5d1197b95624303a2da4a6a4fd8efd8a\moc_Demo2048.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Projects\Demo2048\src\ui.ui">
+      <Filter>Resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Projects\Demo2048\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{E12A121A-81BC-369D-B925-DEC55447129A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated">
+      <UniqueIdentifier>{9ECF5183-CC0E-370C-A7BD-B8F5D2184691}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{7AAA6D44-AB4A-36DC-8756-1BB1773231E9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{FB133320-F2A5-3FBD-9528-92E9D5D1718D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{475EAD31-2A27-3479-883E-77F5A0233736}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
