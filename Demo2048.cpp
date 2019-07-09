@@ -7,7 +7,9 @@
 #include <time.h>
 #include <random>
 #include <Windows.h>
+#include <stack.h>
 #include "Demo2048.h"
+using std::stack;
 Demo2048::Demo2048(QWidget *parent)	: QWidget(parent) {
 	ui = new Ui_Form;
 	ui->setupUi(this);
@@ -59,26 +61,21 @@ void Demo2048::MoveDown() {
 }
 void Demo2048::MoveRight() {
 	std::cout << "Move Right..." << std::endl;
+	bool hasMergeFlag = false;
 	for (int i = 0; i < 4; i++) {
-		int index = 3;
-		if (matrix[4 * i + index] != 0 && matrix[4 * i + index-1] != 0) {
-			if (matrix[4 * i + index] == matrix[4 * i + index-1])
-				matrix[4 * i + index] = 2 * matrix[4 * i + index];
-			index--;
-			if (matrix[4 * i + index-1] != 0) {
-				index--;
+		stack<int> tempStack;
+		tempStack.push(matrix[4 * i + 3]);
+		for (int j = 2; j > 0; j--) {
+			if (matrix[4 * i + j] == tempStack.top() && hasMergeFlag == false) {
+				tempStack.pop();
+				tempStack.push(2 * matrix[4 * i + j]);
+				hasMergeFlag = true;
 			}
-
-			
-		}
-		else if (matrix[4 * i + index] == 0 && matrix[4 * i + index-1] == 0) {
-			if()
-		}
-		else {
-			if (matrix[4 * i + index] != 0);
-			else matrix[4 * i + index] = matrix[4 * i + index-1];
-
-		}
+			else {
+				hasMergeFlag = false;
+				tempStack.push(matrix[4 * i + j]);
+			}
+		}		
 	}
 	generateWord(2);
 }
